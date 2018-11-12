@@ -61,7 +61,7 @@ def draw_lanes(img, lines, color=[255,100,255], thickness=3):
 
 		point2.append(line_dict_neg[neg_index][2])
 		point2.append(line_dict_pos[pos_index][2])
-		print([point1[0][0], point1[0][1], point1[1][0], point1[1][1], point2[0][0], point2[0][1], point2[1][0], point2[1][1]])
+		#print([point1[0][0], point1[0][1], point1[1][0], point1[1][1], point2[0][0], point2[0][1], point2[1][0], point2[1][1]])
 		return [point1[0][0], point1[0][1], point2[0][0], point2[0][1]], [point1[1][0], point1[1][1], point2[1][0], point2[1][1]]
 	except:
 		pass
@@ -109,6 +109,7 @@ def main():
 		if cv2.waitKey(25) & 0xFF == ord('q'):
 			cv2.destroyAllWindows()
 			break
-main()
 
+if __name__ == '__main__':
+	main()
 
